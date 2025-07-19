@@ -1,11 +1,13 @@
 # Introduction
 
 #### Kendime Notlar
-* Fonksiyonları snake_case yazacağım
-* Main içine kod yazılmaz
-* Projeyi fonksiyonlara parçalayıp, sonra bütünleştireceğim
-* Break, continue kullanmamaya çalışacağım
-* Anlaşılabilir ve sade yapmaya çalışacağım	
+* Main içine ana kodu yazma
+* Fonksiyon ve değişken adları snake_case
+* Fonksiyonlar iyi tanımlı ve tek görev yapmalı
+* Fonksiyonlar için 20-50 arası satır ideal, 100'den fazla ise bölünmeli
+* Projeyi fonksiyonlara parçalayıp, sonra bütünleştir
+* Break, continue kullanmamaya çalış
+* Anlaşılabilir ve sade yap
 	
 	
 #### Temel Yazılım Öğeleri

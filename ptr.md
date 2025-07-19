@@ -1,4 +1,4 @@
-
+# Pointer 
 	
 		# Pointer == Dizi : Her dizi bir pointer, her pointer da doğal bir dizidir
 
@@ -11,22 +11,25 @@
 		p0 = &d[8]; --> d[5] = *(p0 - 3)
 	
 
-			DYNAMIC MEMORY
+		DYNAMIC MEMORY
 		---------------------------------------------
-		 1. Dinamik olarak değiştirilemez
+		 1. Dinamik olarak değiştirilemez  
+
 		 C dili için kodlama sırasında henüz kod çalışmadan alacağı memory miktarı
 		 belirli olmalıdır. Ram'de blok halinde memory alınır, dizi elemanları sıralı olarak eklenir
 			 # int d[5]; 5 yerine değişken olursa değeri sabit bile olsa değişkendir ve hatadır
 
-		 2. Dinamik olarak değiştirilebilir (memory allocation)
-			 # int *p = (int *)malloc(sizeof(int)*x)
-				 - (int *) [type-casting(tip dönüşümü)]  : Malloc void *(tipsiz) dönderir. Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir
-				 - sizeof(int,float,char)			     : Int'in kapladığı alan (4 byte)
-				 - x								     : x tane int'in alanını kapla
+		 2. Dinamik olarak değiştirilebilir (memory allocation)  
+
+			 # int *p = (int *)malloc(sizeof(int)*x)  
+				 - (int *) [type-casting(tip dönüşümü)]  : Malloc void *(tipsiz) dönderir.  
+				 Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir  
+				 - sizeof(int,float,char)	         : Int'in kapladığı alan (4 byte)  
+				 - x			                 : x tane int'in alanını kapla
 
      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-			STACK MEMORY (Yığın)
+		STACK MEMORY (Yığın)
 		---------------------------------------------
 		- Stack, programın fonksiyon çağrıları, yerel değişkenleri ve dönüş adresleri gibi bilgileri depoladığı, hızlı erişimli bir bellek bölgesidir
 		- Geçiçi değişkenleri tutar (Int,char,float gibi tanımlanan)
@@ -37,7 +40,7 @@
 		- (-) Yaşam süresi kısa ({} bitince silinir)
 
 
-    		HEAP MEMORY (Yığın)
+    	HEAP MEMORY (Yığın)
 		---------------------------------------------
 		- Malloc, Calloc, Realloc; Manuel free etmek zorundayız, {} ile free edilmez
 		- Uzun süreli veri saklamak veya büyük miktarda bellek ayırmak için kullanılır
@@ -47,38 +50,39 @@
 		- (-) Unutursan "memory leak" (bellek sızıntısı) olur
 
 
-			SEGMENTATION FAULT (segfault)
+		SEGMENTATION FAULT (segfault)
 		---------------------------------------------
 		   En yaygın nedenleri (segment = alan, segmantation = bellek kesiti, bölümü)
 
-		 1. Mallog'la ayrılan alanının dışına yazmaya çalışmak: alan doluysa segfault, ayrılan alanın dışında olmasına rağmen kullanılabilir
+		 1. segfault
+		 Mallog'la ayrılan alanının dışına yazmaya çalışmak: alan doluysa segfault, ayrılan alanın dışında olmasına rağmen kullanılabilir
 
-		 2.
+		 2. segfault
 		 int *p = NULL;
 		 *p = 5;  // NULL pointer'a yazmaya çalışıyor -> segfault
 		 
-		 3.
+		 3. segfault
 		 int *p = malloc(sizeof(int));
 		 free(p);
 		 *p = 10; // free sonrası erişmek hatalı
 		  
-		 4.
+		 4. segfault
 		 int arr[3];
 		 arr[5] = 7;
 		  
-		 5.
+		 5. segfault
 		 char *str = "text";
 		 str[0] = 'T';  // Sabit belleğe yazmaya çalışmak
 
 	 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-			COMPILE TIME (Derleme Zamanı)
+		COMPILE TIME (Derleme Zamanı)
 	    ---------------------------------------------
 	     Kodun derleyici tarafından makine diline çevrildiği zamandır
 	     - Hatalar genellikle bu aşamada tespit edilir
 	     - Dizi boyutunun sabit olması gerektiği gibi kurallar burada kontrol edilir
 
-			EXECUTIBLE TIME (Çalışma Zamanı)
+		EXECUTIBLE TIME (Çalışma Zamanı)
 	    ---------------------------------------------
 	     Programın çalıştırıldığı, yani kodun gerçekten işletildiği zamandır
 	     - Dinamik bellek işlemleri (malloc gibi) bu aşamada gerçekleşir
@@ -88,25 +92,26 @@
 			 #	int **a = (int *)malloc(sizeof(int *)*3) --> 3 tane (int *)(adres) yer açtım (a[0], a[1], a[2])
 
 					  +--------------------------+
-		   **a  --->  |  a[0]  |  a[1]  |  a[2]  |  int * tipinde
+		   	       **a  --->  |  a[0]  |  a[1]  |  a[2]  |  int * tipinde
 					  +--------+--------+--------+
 					      |        |        |
 					      |        |        |
 					      v        v        v
-			       	   +-----+  +-----+  +-----+   
-		      a[0][0]  | int |  | int |  | int |
-			       	   |-----|  |-----|	 |-----|
-			  a[0][1]  | int |  | int |  | int |
+			       		   +-----+  +-----+  +-----+   
+		    		  a[0][0]  | int |  | int |  | int |
+			 	      	   |-----|  |-----|  |-----|
+			 	  a[0][1]  | int |  | int |  | int |
 					   |-----|  |-----|  +-----+
 					   | int |  | int |   a[2]
 					   |-----|  |-----|  
 					   | int |  | int |  
 					   +-----+  |-----|  
-						a[0]    | int |
-								|-----|
-								| int |
-								+-----+
-								 a[1]
+					    a[0]    | int |
+						    |-----|
+						    | int |
+						    +-----+
+						     a[1]
+								
 								
 					--> Başlangıçta hepsi çöp veya NULL
 					a[0] = malloc(sizeof(int) * 4);  // 4 int'lik alan oluşturuldu
@@ -128,11 +133,11 @@
 				***a : adres tutan adresin tutulacağını söyler
 
 						  +--------------------------+
-	   sizeof(int)  --->  |  int   |  int   |   int  |
+	  		       sizeof(int)  --->  |  int   |  int   |   int  |
 						  +--------+--------+--------+
 
 						  +--------------------------+
-	   sizeof(int)  --->  | adres  | adres  |  adres |
+	  		       sizeof(int)  --->  | adres  | adres  |  adres |
 						  +--------+--------+--------+
 
 
@@ -147,23 +152,23 @@
 							**p1 = &p0;
 
 					  +--------------------------+
-		   **a  --->  |  adres |  adres |  adres |
+		   	       **a  --->  |  adres |  adres |  adres |
 					  +--------+--------+--------+
-						  |        |        |
-						  |        |        |
-						  v        v        v
-					   +-----+  +-----+  +-----+
-					   | int |  | int |  | int |
-					   |-----|  |-----|	 |-----|
-					   | int |  | int |  | int |
-					   |-----|  |-----|  +-----+
-					   | int |  | int |   a[2]
-					   |-----|  |-----|
-					   | int |  | int |
-					   +-----+  |-----|
-						a[0]    | int |
-								|-----|
-								| int |
-								+-----+
-								 a[1]
+					       |        |        |
+					       |        |        |
+					       v        v        v
+					    +-----+  +-----+  +-----+
+					    | int |  | int |  | int |
+					    |-----|  |-----|  |-----|
+					    | int |  | int |  | int |
+					    |-----|  |-----|  +-----+
+					    | int |  | int |   a[2]
+					    |-----|  |-----|
+					    | int |  | int |
+					    +-----+  |-----|
+					     a[0]    | int |
+						     |-----|
+						     | int |
+						     +-----+
+						      a[1]
 	

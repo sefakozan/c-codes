@@ -1,5 +1,6 @@
+# String
 
-				STRING İŞLEMLERİ
+	STRING İŞLEMLERİ
 	-------------------------------------------------------------
 
 	#   char str1[20] = "ilk mesaj"; Satırında ne oluyor?
@@ -25,7 +26,7 @@
  
  
  
- 				STRING TANIMLAMALARI
+ 	STRING TANIMLAMALARI
 	-------------------------------------------------------------
 		
 	1. Karakter Dizisi (Char Array) ile Tanımlama

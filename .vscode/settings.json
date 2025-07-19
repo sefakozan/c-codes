@@ -28,4 +28,7 @@
         "editor.tabSize": 4 // Tab genişliğini 4 boşluk olarak ayarla
     },
     "editor.fontSize": 14,
+    "files.associations": {
+        "stdlib.h": "c"
+    },
 }

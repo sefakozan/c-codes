@@ -5,16 +5,14 @@
 * Fonksiyon ve değişken adları snake_case
 * Fonksiyonlar iyi tanımlı ve tek görev yapmalı
 * Fonksiyonlar için 20-50 arası satır ideal, 100'den fazla ise bölünmeli
+* Global değişken kullanma
+* Goto kullanma
 * Projeyi fonksiyonlara parçalayıp, sonra bütünleştir
 * Break, continue kullanmamaya çalış
-* Anlaşılabilir ve sade yap
+* Sayısı belli olan döngülerde for kullan
+* Kesinlikle bir defa çalışacaksa do while döngüsü kullan
+* Özel koşul gerektiren durumlarda while" kullan
 	
-	
-#### Temel Yazılım Öğeleri
-- OS
-- Kaynak Kod
-- Makine Kodu(Binary, Ternary (Quantum Comp.))
-- Compilers
 
 #### Değişkenlerin Standart Çıkışları
 - d,&nbsp;i &emsp;: &emsp;onluk sistem sayısını basar  

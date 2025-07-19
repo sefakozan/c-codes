@@ -23,7 +23,7 @@
 
 			 # int *p = (int *)malloc(sizeof(int)*x)  
 				 - (int *) [type-casting(tip dönüşümü)]  : Malloc void *(tipsiz) dönderir.  
-				 Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir  
+				Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir  
 				 - sizeof(int,float,char)	         : Int'in kapladığı alan (4 byte)  
 				 - x			                 : x tane int'in alanını kapla
 
@@ -52,27 +52,27 @@
 
 		SEGMENTATION FAULT (segfault)
 		---------------------------------------------
-		   En yaygın nedenleri (segment = alan, segmantation = bellek kesiti, bölümü)
+		En yaygın nedenleri (segment = alan, segmantation = bellek kesiti, bölümü)
 
-		 1. segfault
-		 Mallog'la ayrılan alanının dışına yazmaya çalışmak: alan doluysa segfault, ayrılan alanın dışında olmasına rağmen kullanılabilir
+		  1. segfault
+		  Mallog'la ayrılan alanının dışına yazmaya çalışmak: alan doluysa segfault, ayrılan alanın dışında olmasına rağmen kullanılabilir
 
-		 2. segfault
-		 int *p = NULL;
-		 *p = 5;  // NULL pointer'a yazmaya çalışıyor -> segfault
-		 
-		 3. segfault
-		 int *p = malloc(sizeof(int));
-		 free(p);
-		 *p = 10; // free sonrası erişmek hatalı
+		  2. segfault
+		  int *p = NULL;
+		  *p = 5;  // NULL pointer'a yazmaya çalışıyor -> segfault
 		  
-		 4. segfault
-		 int arr[3];
-		 arr[5] = 7;
-		  
-		 5. segfault
-		 char *str = "text";
-		 str[0] = 'T';  // Sabit belleğe yazmaya çalışmak
+		  3. segfault
+		  int *p = malloc(sizeof(int));
+		  free(p);
+		  *p = 10; // free sonrası erişmek hatalı
+		   
+		  4. segfault
+		  int arr[3];
+		  arr[5] = 7;
+		   
+		  5. segfault
+		  char *str = "text";
+		  str[0] = 'T';  // Sabit belleğe yazmaya çalışmak
 
 	 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

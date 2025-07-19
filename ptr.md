@@ -12,8 +12,8 @@
 	
 
 
-				DYNAMIC MEMORY
-	 ----------------------------------------------------
+						DYNAMIC MEMORY
+		----------------------------------------------------
 		1. Dinamik olarak değiştirilemez
 		C dili için kodlama sırasında henüz kod çalışmadan alacağı memory miktarı
 		belirli olmalıdır. Ram'de blok halinde memory alınır, dizi elemanları sıralı olarak eklenir
@@ -74,13 +74,13 @@
 	 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 				COMPILE TIME (Derleme Zamanı)
-	 ----------------------------------------------------
+	 ----------------------------------------------------------------
 	   Kodun derleyici tarafından makine diline çevrildiği zamandır
 	   - Hatalar genellikle bu aşamada tespit edilir
 	   - Dizi boyutunun sabit olması gerektiği gibi kurallar burada kontrol edilir
 
 				EXECUTIBLE TIME (Çalışma Zamanı)
-	 ----------------------------------------------------
+	 ----------------------------------------------------------------
 	   Programın çalıştırıldığı, yani kodun gerçekten işletildiği zamandır
 	   - Dinamik bellek işlemleri (malloc gibi) bu aşamada gerçekleşir
 
@@ -116,7 +116,6 @@
 
 	 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-				(int *): Aldığı alanın en başındaki adresi dönderir
 			#	int **a = (int *)malloc(sizeof(int) * 3) ---> HATALI
 
 				Ne yapıyor?

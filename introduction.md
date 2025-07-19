@@ -3,20 +3,19 @@
 #### Kendime Notlar
 * Main içine ana kodu yazma
 * Fonksiyon ve değişken adları snake_case
-* Fonksiyonlar iyi tanımlı ve tek görev yapmalı
+* Fonksiyonlar iyi tanımlanmış olmalı ve tek iş yapmalı
 * Fonksiyonlar için 20-50 arası satır ideal, 100'den fazla ise bölünmeli
 * Global değişken kullanma
 * Goto kullanma
-* Projeyi fonksiyonlara parçalayıp, sonra bütünleştir
-* Break, continue kullanmamaya çalış
+* Döngülerde gerekmedikçe break, continue kullanmamaya çalış
 * Sayısı belli olan döngülerde for kullan
-* Kesinlikle bir defa çalışacaksa do while döngüsü kullan
-* Özel koşul gerektiren durumlarda while" kullan
+* Kesinlikle bir defa çalışacaksa do-while döngüsü kullan
+* Özel koşul gerektiren durumlarda while kullan
 	
 
 #### Değişkenlerin Standart Çıkışları
 - d,&nbsp;i &emsp;: &emsp;onluk sistem sayısını basar  
-	Not&ensp; :&emsp; %5d -> 5 karakter oluştur ve bas. "
+	Not&ensp; :&emsp; %5d -> 5 karakter oluştur ve bas
 - u&emsp;&emsp;:&emsp; pozitif tam sayıyı basar (unsigned)
 - llu&emsp;&ensp;: &emsp;long long unsigned
 - f,&nbsp;F&emsp;&nbsp;:&emsp; ondalık sayı  

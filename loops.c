@@ -82,7 +82,7 @@ void donguler()
 }
 
 // 100'den 20'ye kadar, 3 ve 7'ye tam bolunen
-//  sayilari buyukten kucuge dogru yazdiriniz
+// sayilari buyukten kucuge dogru yazdiriniz
 void exam1()
 {
 

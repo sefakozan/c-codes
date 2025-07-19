@@ -11,24 +11,23 @@
 		p0 = &d[8]; --> d[5] = *(p0 - 3)
 	
 
+			DYNAMIC MEMORY
+		---------------------------------------------
+		 1. Dinamik olarak değiştirilemez
+		 C dili için kodlama sırasında henüz kod çalışmadan alacağı memory miktarı
+		 belirli olmalıdır. Ram'de blok halinde memory alınır, dizi elemanları sıralı olarak eklenir
+			 # int d[5]; 5 yerine değişken olursa değeri sabit bile olsa değişkendir ve hatadır
 
-						DYNAMIC MEMORY
-		----------------------------------------------------
-		1. Dinamik olarak değiştirilemez
-		C dili için kodlama sırasında henüz kod çalışmadan alacağı memory miktarı
-		belirli olmalıdır. Ram'de blok halinde memory alınır, dizi elemanları sıralı olarak eklenir
-			# int d[5]; 5 yerine değişken olursa değeri sabit bile olsa değişkendir ve hatadır
-
-		2. Dinamik olarak değiştirilebilir (memory allocation)
-			# int *p = (int *)malloc(sizeof(int)*x)
-				- (int *) [type-casting(tip dönüşümü)] : Malloc void *(tipsiz) dönderir. Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir
-				- sizeof(int,float,char)			   : Int'in kapladığı alan (4 byte)
-				- x									   : x tane int'in alanını kapla
+		 2. Dinamik olarak değiştirilebilir (memory allocation)
+			 # int *p = (int *)malloc(sizeof(int)*x)
+				 - (int *) [type-casting(tip dönüşümü)]  : Malloc void *(tipsiz) dönderir. Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir
+				 - sizeof(int,float,char)			     : Int'in kapladığı alan (4 byte)
+				 - x								     : x tane int'in alanını kapla
 
      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-				STACK MEMORY (Yığın)
-		 ---------------------------------
+			STACK MEMORY (Yığın)
+		---------------------------------------------
 		- Stack, programın fonksiyon çağrıları, yerel değişkenleri ve dönüş adresleri gibi bilgileri depoladığı, hızlı erişimli bir bellek bölgesidir
 		- Geçiçi değişkenleri tutar (Int,char,float gibi tanımlanan)
 		- LIFO sistemi: Son giren, ilk çıkar
@@ -38,8 +37,8 @@
 		- (-) Yaşam süresi kısa ({} bitince silinir)
 
 
-    			HEAP MEMORY (Yığın)
-		 ---------------------------------
+    		HEAP MEMORY (Yığın)
+		---------------------------------------------
 		- Malloc, Calloc, Realloc; Manuel free etmek zorundayız, {} ile free edilmez
 		- Uzun süreli veri saklamak veya büyük miktarda bellek ayırmak için kullanılır
 		- (+) Bellek çok geniş (GB'lar olabilir)
@@ -48,8 +47,8 @@
 		- (-) Unutursan "memory leak" (bellek sızıntısı) olur
 
 
-				SEGMENTATION FAULT (segfault)
-		 --------------------------------------
+			SEGMENTATION FAULT (segfault)
+		---------------------------------------------
 		   En yaygın nedenleri (segment = alan, segmantation = bellek kesiti, bölümü)
 
 		 1. Mallog'la ayrılan alanının dışına yazmaya çalışmak: alan doluysa segfault, ayrılan alanın dışında olmasına rağmen kullanılabilir
@@ -73,16 +72,16 @@
 
 	 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-				COMPILE TIME (Derleme Zamanı)
-	 ----------------------------------------------------------------
-	   Kodun derleyici tarafından makine diline çevrildiği zamandır
-	   - Hatalar genellikle bu aşamada tespit edilir
-	   - Dizi boyutunun sabit olması gerektiği gibi kurallar burada kontrol edilir
+			COMPILE TIME (Derleme Zamanı)
+	    ---------------------------------------------
+	     Kodun derleyici tarafından makine diline çevrildiği zamandır
+	     - Hatalar genellikle bu aşamada tespit edilir
+	     - Dizi boyutunun sabit olması gerektiği gibi kurallar burada kontrol edilir
 
-				EXECUTIBLE TIME (Çalışma Zamanı)
-	 ----------------------------------------------------------------
-	   Programın çalıştırıldığı, yani kodun gerçekten işletildiği zamandır
-	   - Dinamik bellek işlemleri (malloc gibi) bu aşamada gerçekleşir
+			EXECUTIBLE TIME (Çalışma Zamanı)
+	    ---------------------------------------------
+	     Programın çalıştırıldığı, yani kodun gerçekten işletildiği zamandır
+	     - Dinamik bellek işlemleri (malloc gibi) bu aşamada gerçekleşir
 
 	 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

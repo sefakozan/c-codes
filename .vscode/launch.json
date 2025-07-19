@@ -1,0 +1,18 @@
+{
+    // Projeniz için hata ayıklama (debugging) konfigürasyonlarını tanımlar
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "c-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/build/${fileBasenameNoExtension}.exe",
+            "args": [], // Program çalışırken maine verilen argüman
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "c-build"
+        }
+    ]
+}

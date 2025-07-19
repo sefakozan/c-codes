@@ -1,0 +1,33 @@
+{
+	// VS Code'da çalıştırılabilecek görevleri (tasks) tanımlar. 
+	// Bu görevler, kodu derlemek, testleri çalıştırmak, linter'ı tetiklemek veya 
+	// herhangi bir harici komut dosyasını çalıştırmak gibi otomasyon adımları olabilir.
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "c-build",
+			"command": "C:\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-Wall",
+				"-std=c99",
+				"${file}",
+				"-o",
+				"${fileDirname}\\build\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\mingw64\\bin\\gcc.exe"
+		}
+	]
+}

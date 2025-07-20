@@ -45,7 +45,7 @@ void greeting(void)
     printf("\t\t|\t\t\t\t\t\t\t\t\t\t|\n");
     printf("\t\t+-------------------------------------------------------------------------------+\n");
     printf("\t\tPress any key to continue. . .");
-    _getch();
+    getchar();
     printf("\033[2J\033[H"); // clear
 
     printf("\t+-------------------------------------------------------------------------------+\n");
@@ -107,14 +107,14 @@ char get_user_answer()
     char answer;
 
     printf("answer: ");
-    answer = _getch();
+    answer = getchar();
     answer = tolower(answer); // küçük duyarlılığı
     printf("%c\n", answer);
 
     while (answer != 'b' && answer != 's' && answer != 'e' && answer != 27)
     {
         printf("\nEnter a valid value: ");
-        answer = _getch();
+        answer = getchar();
         printf("%c\n", answer);
     }
 

@@ -21,7 +21,7 @@
 		İlk durum, str1 bir işaretçiydi ve doğrudan "read-only" string literalinin adresini tutuyordu.
 		İkinci senaryoda ise, str1'in kendisi 20 karakterlik bir dizi ve string literalinin içeriği bu diziye kopyalanıyor.
 		
-		char *ptr = "Hello World"; ptr[0] = 'h';), işletim sistemi bir "segmentation fault" veya "access violation" hatası fırlatarak programı sonlandırır. 
+		(char *ptr = "Hello World"; ptr[0] = 'h';), işletim sistemi bir "segmentation fault" veya "access violation" hatası fırlatarak programı sonlandırır. 
 		Bu, bu bellek alanının fiilen değiştirilemez olduğunu gösterir.
  
  

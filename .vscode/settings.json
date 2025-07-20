@@ -29,6 +29,10 @@
     },
     "editor.fontSize": 14,
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "stdio.h": "c",
     },
+    "C_Cpp.vcFormat.indent.caseLabels": false,
+    "C_Cpp.vcFormat.indent.caseContents": false,
+    "C_Cpp.vcFormat.indent.caseContentsWhenBlock": false,
 }

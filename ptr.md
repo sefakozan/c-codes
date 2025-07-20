@@ -23,7 +23,7 @@
 
 			 # int *p = (int *)malloc(sizeof(int)*x)  
 				 - (int *) [type-casting(tip dönüşümü)]  : Malloc void *(tipsiz) dönderir.  
-				Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir  
+				   Aldığı alanın en başındaki adresi dönderir. [int, float, char] dizisi olarak değiştirilebilir  
 				 - sizeof(int,float,char)	         : Int'in kapladığı alan (4 byte)  
 				 - x			                 : x tane int'in alanını kapla
 

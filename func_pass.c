@@ -13,7 +13,7 @@ int main()
     printf("main x'in adresi: %p\n", &x);
 
     // Scanf bir Pass by Referance'dır
-    printf("değer: ");
+    printf("deger: ");
     scanf("%d", &x);
 
     // Pass by Value (Değerle Geçirme) -> orijinal değişkeni değiştiremez
@@ -43,7 +43,7 @@ void degistir1(int x)
 void degistir2(int *x)
 {                                       // (int* x) aynı
     printf("2. x'in adresi: %p\n", x);  // adresi yazdırdı
-    printf("2. x'in değeri: %d\n", *x); // adresteki değeri yazdırdı
+    printf("2. x'in degeri: %d\n", *x); // adresteki değeri yazdırdı
 
     // adresin değeri
     *x = 10;

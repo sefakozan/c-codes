@@ -6,7 +6,7 @@ void string_tanim(void);
  *	String, char dizisidir. Stringin, string olarak kabul edilebilmesi için dizinin sonunda mutlaka
  *    \0 (end of string, null terminator) olmalıdır
  *
- *     char arr[] = {'S', 'e', 'f', 'a'};
+ *   char arr[] = {'S', 'e', 'f', 'a'};
  *	 char str[] = "Sefa"; --> Ramde | S | e | f | a | \0 | şeklinde yer tutar
  *									  0   1   2   3    4  -> indexler
  */

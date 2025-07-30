@@ -33,7 +33,7 @@ void string_tanim()
 
     // printf("%s, %s\n", ptr1, ptr2); // &s \0 gelene kadar tek tek işler
 
-    // 1 - Shadow Copy (Adres Değiştirme)
+    // 1 - Shallow Copy (Sığ Kopyalama) (Adres Değiştirme)
     char *ptr1 = str1;
     char *ptr2 = str2;
 

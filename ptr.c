@@ -18,18 +18,17 @@ int main()
     // 64 bit pc'de bellek adresi 8 byte
     printf("byte: %llu %llu %llu\n", sizeof(void_ptr), sizeof(int_ptr), sizeof(char_ptr));
 
+    pointerTanim();
     test_malloc();
 
     return 0;
 }
 
-void pointer_tanim()
+void pointerTanim()
 {
-
     /*
             POINTERS(Gösterici)
        Ramde duran Pointer içinde değer(tam sayı) durmaz, değişken adresi durur
-
     */
 
     // %p : 16lık sistemde adresi yazar
@@ -38,7 +37,7 @@ void pointer_tanim()
     int *p, **p1; // p değişkeni tanımlandı (int* p'de doğru)
     int a = 10;   // a değişkenine 10 verildi
     p = &a;       // a değişkenin adresi p pointer değişkenine değer olarak verildi
-    **p1 = &p;
+    p1 = &p;      // **p1 = &p segmentation fault
     printf("a degiskeninin degeri: %d\n", a);
     printf("a degiskeninin adresi: %p\n\n", &a);
 

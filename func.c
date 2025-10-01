@@ -19,7 +19,6 @@ int kare_sayisi(int);
 */
 int main()
 {
-
     // fact
     int x;
     printf("Fact almak istediginiz sayi: ");

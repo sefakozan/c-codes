@@ -33,7 +33,6 @@ void ters_dik_ucgen_sol_yildiz(void);
 */
 int main()
 {
-
     carpim_tablosu();
     dik_ucgen_yildiz();
     ters_dik_ucgen_sag_yildiz();
@@ -43,7 +42,6 @@ int main()
 
 void carpim_tablosu()
 {
-
     int i, j; // foo, bar olarakta isimlendirilebilir (kültür)
 
     for (i = 1; i <= 10; i++)
@@ -74,7 +72,6 @@ void dik_ucgen_yildiz()
 
 void ters_dik_ucgen_sag_yildiz()
 {
-
     for (int i = 0; i < 10; i++)
     {
         // j<10 dikdörtgen, giderek azalması gerek 10-i
@@ -94,7 +91,6 @@ void ters_dik_ucgen_sag_yildiz()
 
 void ters_dik_ucgen_sol_yildiz()
 {
-
     for (int i = 0; i < 10; i++)
     {
         // yıldız basacak

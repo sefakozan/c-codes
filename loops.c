@@ -38,7 +38,6 @@ void exam4(void);
 // yaptigim ornekler
 int main()
 {
-
     // Exam1();
     // Exam2();
     // Exam3();

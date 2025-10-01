@@ -43,7 +43,7 @@ int main()
     int n = 34;
 
     int p;
-    p = m, n; // sol operand p=a, sağ operand b
+    p = m, n; // sol operand p=m, sağ operand n
     p = (m, n);
     // (m,n) ifadesinin değeri 34 (sağ)
     printf("%d", (m, n));

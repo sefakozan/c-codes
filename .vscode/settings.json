@@ -3,15 +3,7 @@
         "textMateRules": [
             {
                 "scope": [
-                    "variable", // Genel değişkenler
-                    "variable.language", // 'this', 'super' gibi dil değişkenleri
-                    "variable.parameter", // Fonksiyon parametreleri
-                    "variable.name",
-                    "storage.type", // 'int', 'float', 'char' gibi veri tipleri
-                    "entity.name.function", // Fonksiyon isimleri (örn. 'main')
                     "comment", // Yorum satırları
-                    "constant.numeric", // Sayısal değerler (örn. 123, 3.14)
-                    "keyword.control.directive", // #include, #define gibi önişlemci direktifleri
                 ],
                 "settings": {
                     "fontStyle": "italic"
@@ -19,7 +11,6 @@
             }
         ]
     },
-    "editor.fontFamily": "Consolas, 'Courier New', monospace", // Font Family
     "editor.formatOnSave": true, // Kodu formatlar
     "files.autoSave": "onFocusChange", // Focus kaybolunca oto save'ler
     "C_Cpp.default.cStandard": "c99",
